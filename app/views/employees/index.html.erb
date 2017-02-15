@@ -1,0 +1,15 @@
+<h1>Employees</h1>
+<% @employees.each do |employee| %>
+<b>Full Name:</b> <%= employee.full_name %><br>
+<b>Email:</b> <%= employee.email %><br>
+<b>Birthdate:</b> <%= employee.birthdate%><br>
+<b>Address:</b> <%employee.addresses.each do |address| %>
+<%= address['address'] %><br>
+<%= address['city'] %><br>
+<%= address['state'] %><br>
+<%= address['zip'] %><br>
+<br>
+
+
+<%end%>
+<% end %>
